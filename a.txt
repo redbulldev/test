@@ -1,1 +1,5 @@
 add a.
+
+echo 'a'
+
+echo 'git --amend --no-edit'
