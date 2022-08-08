@@ -1,3 +1,147 @@
 test
 
 echo 'git tag'
+
+
+
+---------------------------------------
+*các lệnh dã test*
+
+
+$ git add test.txt
+
+$ git add a.txt
+
+
+$ git commit -m 'amend file'
+
+$ git push origin -u main
+
+
+
+$ git checkout -b beta
+Switched to a new branch 'beta'
+
+$ git branch
+* beta
+  main
+
+$ git add b_beta.txt
+
+$ git commit -m'add b_beta'
+
+$ git push origin -u main
+
+$ git push origin -u beta
+
+
+$ git switch beta
+Switched to branch 'beta'
+M       a.txt
+Your branch is up to date with 'origin/beta'.
+
+$ git branch
+* beta
+  main
+
+
+$ git switch main
+Switched to branch 'main'
+M       a.txt
+Your branch is up to date with 'origin/main'.
+
+
+$ git branch
+  beta
+* main
+
+$ git tag
+
+$ git tag -l
+
+
+$ git add a.txt
+
+
+$ git commit -m 'test git tag'
+[main 9700ab3] test git tag
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+
+$ git tag thunghiem -m'thu nghiem xem thay doi history commit duoc ko'
+
+
+$ git tag -l
+thunghiem
+
+
+$ git switch beta
+Switched to branch 'beta'
+Your branch is up to date with 'origin/beta'.
+
+
+$ git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+$ git status
+On branch main
+...
+        modified:   test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+$ git add test.txt
+
+
+$ git log --oneline
+9700ab3 (HEAD -> main, tag: thunghiem) test git tag
+11b6e5c (origin/main) amend file
+84d6907 first commit
+
+$ git commit --amend -m'add a.txt/test-sua commit'
+[main dcdeb2d] add a.txt/test-sua commit
+ Date: Tue Aug 9 02:46:58 2022 +0700
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+$ git log --oneline
+dcdeb2d (HEAD -> main) add a.txt/test-sua commit
+11b6e5c (origin/main) amend file
+84d6907 first commit
+
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+$ git add .
+
+$ git add .
+
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   a.txt
+
+
+$ git commit --amend --no-edit
+[main bfc32be] add a.txt/test-sua commit
+ Date: Tue Aug 9 02:46:58 2022 +0700
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+
+$ git push --force
+
+
+$ git tag
+thunghiem
+
+$ git show thunghiem
+tag thunghiem
+...
